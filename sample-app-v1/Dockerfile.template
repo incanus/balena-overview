@@ -1,0 +1,7 @@
+FROM balenalib/%%BALENA_MACHINE_NAME%%-python:build
+
+WORKDIR /app
+
+COPY ./datething.sh /app/
+
+CMD ["/app/datething.sh"]

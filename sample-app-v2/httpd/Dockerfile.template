@@ -1,0 +1,8 @@
+FROM balenalib/%%BALENA_MACHINE_NAME%%-python:build
+
+WORKDIR /app
+
+COPY ./httpd.py /app/
+COPY ./foo /app/
+
+CMD ["/app/httpd.py"]
